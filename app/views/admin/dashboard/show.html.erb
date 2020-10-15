@@ -3,14 +3,12 @@
 
 <table class="table table-bordered">
   <tr>
-    <td> Products: </td>
+    <td> <%= link_to 'Products:',  [:admin, :products] %></td>
     <td> <%= @product_count %> </td>
   </tr>
 
   <tr>
-    <td> Categories: </td>
+    <td> <%= link_to 'Categories:' ,  [:admin, :categories] %> </td>
     <td> <%= @category_count %> </td>
   </tr>
   </table>
-
-  <%= link_to 'See products',  [:admin, :products] %>

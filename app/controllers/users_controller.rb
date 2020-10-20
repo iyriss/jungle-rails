@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    puts "creating new user here!"
     user = User.new(user_params)
+    user.email.strip.downcase
     if user.save
       session[:user_id] = user.id
       redirect_to '/', notice: 'Account created successfully'
